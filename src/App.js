@@ -1,10 +1,11 @@
 import Navbar from './comps/Navbar';
 import Home from './comps/Home';
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
+import useFetch from './hooks/useFetch';
 
 function App() {
 
-  const [blogs, setBlogs] = useState();
+  const {data: blogs, error, isPending} = useFetch("http://localhost:8000/blogs")
 
   // blog-constructor
   function Blog(company, body, founder, id){
@@ -15,21 +16,14 @@ function App() {
   }
 
 
-  useEffect(()=> {
-    setTimeout(()=> {
-      fetch("http://localhost:8000/blogs")
-      .then(data => data.json())
-        .then(res => {
-          setBlogs(res);
-        })
-    }, 2000)
-    
-  }, [])
 
+ 
   return (
     <div className="App">
       <Navbar />
-      {blogs ? <Home blogs={blogs} /> : <p>Loding...</p> }
+      { isPending && <div>Loding...</div> }
+      { error && <div>{ error }</div> }
+      { blogs && <Home blogs={blogs} /> }
     </div>
   );
 }
