@@ -1,12 +1,9 @@
-import BlogList from "../BlogList";
+import Navbar from './Navbar'
 
-const Home = ({ blogs }) => {
-    return ( 
+export default function Home(){
+    return(
         <div className="home">
-            <h3>All blogs</h3>
-            <BlogList blogs={blogs}/>
+            <Navbar />
         </div>
-     );
+    );
 }
- 
-export default Home;

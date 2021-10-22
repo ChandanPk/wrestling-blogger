@@ -1,13 +1,13 @@
-const Navbar = () => {
-    return ( 
+
+export default function Navbar(){
+    return(
         <nav>
-            <h1>Wresting Blogs</h1>
+            <h1>Logo</h1>
             <ul>
-                <a href="/">Add-blogs</a>
-                <a href="/">Home</a>
+                <a href="#s">Home</a>
+                <a href="#s">About</a>
+                <a href="#s">Add Blog</a>
             </ul>
         </nav>
-     );
+    );
 }
- 
-export default Navbar;
