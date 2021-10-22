@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap');
 
+:root {
+  --primary-color: #E93B81; 
+}
+
+* {
+  margin: 0;
+}
 
 body {
   font-family: 'Montserrat', sans-serif;
-
 }
 
 ul {
@@ -17,6 +23,7 @@ nav a {
   padding: 0.5em 1em;
   margin: auto 2px;
   border: 1px solid white;
+  color: #333;
 
 }
 
@@ -30,11 +37,52 @@ nav {
   margin: auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   /* background-color: cadetblue; */
   border-bottom: 1px solid #333;
 }
 
+nav > h1 {
+  font-size: 2.5rem;
+  margin: .5em 0;
+  color: var(--primary-color)
+  
+}
 
+.App {
+  max-width: 700px;
+  margin: auto;
+}
+
+.home > h2 {
+  margin-top: 1.5em;
+  font-size: 1.8rem;
+  margin-left: 10px;
+}
+
+.home .blogs {
+  margin-top: 1em;
+  /* border: 1px solid black; */
+  padding: 1em;
+
+}
+
+.home .blogs:hover {
+  transition: 50ms;
+  padding: 1.1em;
+  border-radius: 1em;
+  box-shadow: 8px 8px 5px 0px rgb(233, 222, 231);
+  cursor: pointer;
+}
+
+.blogs h3{
+
+}
+
+.blogs p {
+  font-size: .9rem;
+  margin-top: 8px;
+}
 
 
 

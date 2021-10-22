@@ -2,7 +2,7 @@
 export default function Navbar(){
     return(
         <nav>
-            <h1>Logo</h1>
+            <h1>Tindog</h1>
             <ul>
                 <a href="#s">Home</a>
                 <a href="#s">About</a>

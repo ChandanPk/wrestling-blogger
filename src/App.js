@@ -1,10 +1,12 @@
 import Home from './comps/Home'
+import Navbar from './comps/Navbar'
 
 function App() {
   return (
-      <div className="App">
+    <div className="App">
+      <Navbar />
       <Home />
-      </div>
+    </div>
   );
 }
 
