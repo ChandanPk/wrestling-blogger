@@ -39,7 +39,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   /* background-color: cadetblue; */
-  border-bottom: 1px solid #333;
+  border-bottom: 2px solid rgb(212, 206, 206);
 }
 
 nav > h1 {
@@ -76,7 +76,7 @@ nav > h1 {
 }
 
 .blogs h3{
-
+  color: var(--primary-color);
 }
 
 .blogs p {
