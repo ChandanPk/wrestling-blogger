@@ -52,6 +52,7 @@ nav > h1 {
 .App {
   max-width: 700px;
   margin: auto;
+  padding-bottom: 2em;
 }
 
 .home > h2 {
@@ -69,7 +70,7 @@ nav > h1 {
 
 .home .blogs:hover {
   transition: 50ms;
-  padding: 1.1em;
+  /* padding: 1.1em; */
   border-radius: 1em;
   box-shadow: 8px 8px 5px 0px rgb(233, 222, 231);
   cursor: pointer;
@@ -81,9 +82,21 @@ nav > h1 {
 
 .blogs p {
   font-size: .9rem;
-  margin-top: 8px;
+  margin-top: 3px;
 }
 
+.blogs button {
+  margin-top: .5em;
+  padding: .3em .2em;
+}
+
+.loading {
+  position: absolute;
+  right: 43%;
+  top: 30%;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
 
 
 
