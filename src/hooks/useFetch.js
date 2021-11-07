@@ -8,7 +8,7 @@ export default function useFetch(url) {
     const [err, setErr] = useState(null);
     const [isPending, setIsPending] = useState(true);
 
-    useEffect(() => {
+    const getBlogs = () => {
         setTimeout(() => {
             fetch(url, { signal: abortContr.signal })
                 .then(res => {
@@ -27,19 +27,22 @@ export default function useFetch(url) {
                     err && setErr(null)
                 })
                 .catch(err => {
-                    if (err.name === "AbortError"){
+                    if (err.name === "AbortError") {
                         console.log("Fetch was aborted!")
-                    }else {
+                    } else {
                         console.log(err, "bc")
                         setErr(err.message)
                         setIsPending(null)
                     }
-                    
+
                 })
         }, 1000)
+    }
 
-        return ()=> abortContr.abort();
-
+    useEffect(() => {
+        getBlogs()
+        return () => abortContr.abort();
+    // eslint-disable-next-line
     }, [])
 
     return { data, isPending, err, setData }
