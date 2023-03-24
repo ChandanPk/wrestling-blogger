@@ -140,15 +140,50 @@ nav > h1 {
   font-size: 1rem;
 }
 
+.btn {
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  padding: .6em 1.1em;
+  background-color: #fff;
+  color: red;
+  font-size: 1rem;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.btn:hover {
+  color: #fff;
+  background: var(--primary-color);
+  cursor: pointer;
+}
+
 .preview button:hover {
   color: #fff;
   background: var(--primary-color);
   cursor: pointer;
 }
 
+/* Form styling */
 
+.field {
+  display: block;
+  padding: 1em;
+  margin-top: 1em;
+  width: 100%;
+}
 
+.add-blog-header {
+  font-size: 2.3rem;
+  font-weight: 900;
+}
 
+.body-field {
+  height: 20vh;
+}
+
+.form {
+  margin-top: 4rem;
+}
 
 
 
