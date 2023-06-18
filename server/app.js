@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import { Blog } from "./models/blog.js";
 import cors from "cors";
 import { config } from "dotenv";
+import morgan from "morgan";
 
 // .env conguration
 config();
@@ -11,6 +12,7 @@ const app = express();
 // Middlewares
 app.use(express.json());
 app.use(cors({ origin: "*" }));
+app.use(morgan("combined"));
 
 // Connect to DB
 const dbURI = process.env.DB_URI;
