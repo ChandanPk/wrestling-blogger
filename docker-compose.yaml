@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  tindog-api:
+    build: ./server
+    container_name: tindog-api
+    ports:
+      - '8001:8001'
+
+  tindog-client:
+    build: ./tindog-client
+    container_name: tindog-client
+    ports:
+      - '3000:3000'

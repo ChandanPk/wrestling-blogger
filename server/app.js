@@ -5,6 +5,10 @@ import cors from "cors";
 import { config } from "dotenv";
 import morgan from "morgan";
 
+// constants
+const DB_URI =
+  "mongodb+srv://test123:qwertyui7887@cluster1.poyg3sg.mongodb.net/tindogDB";
+
 // .env conguration
 config();
 const app = express();
@@ -15,9 +19,9 @@ app.use(cors({ origin: "*" }));
 app.use(morgan("combined"));
 
 // Connect to DB
-const dbURI = process.env.DB_URI;
+
 mongoose
-  .connect(dbURI)
+  .connect(DB_URI)
   .then(() =>
     app.listen(8001, () => console.log("Server up and running on port 8001!"))
   )
