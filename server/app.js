@@ -5,13 +5,13 @@ import cors from "cors";
 import { config } from "dotenv";
 import morgan from "morgan";
 
-// constants
-const DB_URI =
-  "mongodb+srv://test123:qwertyui7887@cluster1.poyg3sg.mongodb.net/tindogDB";
+const app = express();
 
 // .env conguration
 config();
-const app = express();
+
+// constants
+const DB_URI = process.env.DB_URI;
 
 // Middlewares
 app.use(express.json());
